@@ -13,7 +13,6 @@ const turnMeBaby = str => {
   } else {
     return new Error('this is not a string');
   }
-  /* your logic here...*/
 };
 
 export default turnMeBaby;

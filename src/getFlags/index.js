@@ -6,12 +6,11 @@
  * getFlags(arr); // [1, 2, 3, 4, 5, 6]
  */
 const getFlags = arr => {
-  // TODO: refactor
   let newArr = [];
   if(arr instanceof Array) {
-    arr.map((value, index, array) => {
-      newArr.push(...value.flags);
-    })
+    for (let i = 0; i < arr.length; i++) {
+      newArr.push(...arr[i].flags);
+    }
   }
 
   return newArr;
