@@ -14,8 +14,12 @@ const sumElements = arr => {
 let sum = 0;
   for (let i = 0; i < arr.length; i++) {
     if (!isFinite(arr[i]) || isNaN(arr[i])) {
-      // parseInt(arr[i], 16);
-      continue;
+      let num = parseInt(arr[i], 16);
+      if(isNaN(num)){
+        continue;
+      } else {
+        arr[i] = num;
+      }
     }
 
     sum += Number(arr[i]);
