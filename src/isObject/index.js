@@ -8,6 +8,8 @@
  * isObject(null); // false
  */
 const isObject = data => {
+  if(data instanceof Array) return false;
+  return data instanceof Object;
   /* your logic here...*/
 };
 
